@@ -1,0 +1,34 @@
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #e9ecef;
+}
+
+.sidebar-link.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.sidebar-icon {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.topbar {
+  background-color: #f1f1f1;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+  font-size: 1.25rem;
+  user-select: none;
+}
