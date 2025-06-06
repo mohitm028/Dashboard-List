@@ -1,5 +1,7 @@
 import { NavLink, useLocation } from 'react-router-dom'
 
+import "./index.css"
+
 import { menuItems } from '../constants/listConfig'
 import { DASHBOARD } from '../constants/appConfig'
 
@@ -21,6 +23,7 @@ const Sidebar = () => {
             `btn w-100 mb-2 ${isActive ? 'btn-primary' : 'btn-outline-primary'}`
           }
         >
+              <span className="sidebar-icon">{item.icon}</span>
           {item.label}
         </NavLink>
       ))}
