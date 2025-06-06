@@ -11,4 +11,6 @@ export interface ProductsState {
   products: Product[]
   loading: boolean
   error: string | null
+   categories: string[],
+   selectedCategory: string
 }

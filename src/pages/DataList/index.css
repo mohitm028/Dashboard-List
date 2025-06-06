@@ -1,0 +1,50 @@
+.product-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 600px;
+}
+
+.search-input {
+  flex: 1 1 250px;
+}
+
+.category-select {
+  flex: 1 1 200px;
+}
+
+.col-sn {
+  width: 5%;
+  text-align: center;
+}
+
+.col-title {
+  width: 20%;
+}
+
+.col-price {
+  width: 10%;
+  text-align: right;
+}
+
+.col-category {
+  width: 15%;
+}
+
+.col-description {
+  width: 35%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.col-image {
+  width: 15%;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}

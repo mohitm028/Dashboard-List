@@ -12,22 +12,22 @@ const Sidebar = () => {
     menuItems.find((item) => item.path === location.pathname)?.label || DASHBOARD
 
   return (
-    <div>
-      <h4>{currentTitle}</h4>
-      <hr />
-      {menuItems.map((item) => (
-        <NavLink
-          to={item.path}
-          key={item.path}
-          className={({ isActive }) =>
-            `btn w-100 mb-2 ${isActive ? 'btn-primary' : 'btn-outline-primary'}`
-          }
-        >
-              <span className="sidebar-icon">{item.icon}</span>
-          {item.label}
-        </NavLink>
-      ))}
-    </div>
+  <div className="sidebar-container">
+  <h4>{currentTitle}</h4>
+  <hr />
+  {menuItems.map((item) => (
+    <NavLink
+      to={item.path}
+      key={item.path}
+      className={({ isActive }) =>
+        `sidebar-link ${isActive ? 'active' : ''}`
+      }
+    >
+      <span className="sidebar-icon">{item.icon}</span>
+      {item.label}
+    </NavLink>
+  ))}
+</div>
   )
 }
 
