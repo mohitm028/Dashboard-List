@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { fetchCategories, fetchProducts, fetchProductsByCategory } from './productsActions'
 
+import { fetchCategories, fetchProducts, fetchProductsByCategory } from './productsActions'
 import type { ProductsState } from '../../interface/products'
 
 const initialState: ProductsState = {

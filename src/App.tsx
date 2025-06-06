@@ -1,12 +1,11 @@
 import { Route, Routes } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
 
 import './App.css'
 
 import Sidebar from './components/Sidebar'
 import Home from './pages/Home/Home'
 import Data from './pages/DataList/Data'
-import { ToastContainer } from 'react-toastify'
-
 
 function App() {
 

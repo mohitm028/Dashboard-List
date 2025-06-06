@@ -14,19 +14,14 @@ const Data = () => {
   const dispatch = useDispatch<AppDispatch>()
   const { products, loading, error,categories } = useSelector((state: RootState) => state.products)
 
-  // Local state for search and pagination
   const [searchTerm, setSearchTerm] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 5
 
-  
-
-  // Filter logic is here 
   const filteredProducts = products.filter((p: Product) =>
     p.title.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
-  // Pagination logic is here 
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage)
   const paginatedProducts = filteredProducts.slice(
     (currentPage - 1) * itemsPerPage,
