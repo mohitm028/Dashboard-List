@@ -1,15 +1,16 @@
 import { Route, Routes } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
 
 import './App.css'
 
 import Sidebar from './components/Sidebar'
-import Home from './pages/Home'
-import Data from './pages/Data'
-// import Topbar from './components/Topbar'
+import Home from './pages/Home/Home'
+import Data from './pages/DataList/Data'
 
 function App() {
 
-  return (
+  return (<>
+    <ToastContainer />
     <div className="app-layout">
       <div className="sidebar">
         <Sidebar />
@@ -19,11 +20,13 @@ function App() {
         <div style={{ padding: '2rem' }}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/data" element={<Data />} />
+            <Route path="/product-list" element={<Data />} />
           </Routes>
         </div>
       </div>
     </div>
+  </>
+
   )
 }
 

@@ -1,29 +1,18 @@
-import { useLocation } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom'
 
 import "./index.css"
 
-import { DASHBOARD } from '../constants/appConfig'
-
-const routeTitleMap: Record<string, string> = {
-  '/': 'Home',
-  '/data': 'Data',
-}
+// import { DASHBOARD } from '../constants/appConfig'
 
 const Topbar = () => {
-  const { pathname } = useLocation()
-  const title = routeTitleMap[pathname] || DASHBOARD
-
   return (
-    <div
-      style={{
-        backgroundColor: '#f1f1f1',
-        padding: '1rem 2rem',
-        borderBottom: '1px solid #ddd',
-        fontWeight: 600,
-        fontSize: '1.25rem',
-      }}
-    >
-      {title}
+    <div className="topbar-container">
+      <div className="topbar-content">
+        <div className="topbar-title">MyApp</div>
+        <div className="topbar-logo">
+          <img src="/logo.png" alt="Logo" height="40" />
+        </div>
+      </div>
     </div>
   )
 }
